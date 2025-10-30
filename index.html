@@ -368,17 +368,121 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="#">공지사항</a>
-        <a href="#">이용약관</a>
-        <a href="#">개인정보처리방침</a>
-        <a href="#">문의하기</a>
-      </div>
-      <p class="footer-copy">© 2025 Acarive Clone. All rights reserved.</p>
+  <!-- 👇 푸터 -->
+<!-- 👇 푸터 -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>arca.live</h3>
+      <p>👥 26414</p>
+      <p>Live v2 (e1bf30f6)</p>
+      <p>Operado por umanle S.R.L.</p>
+      <p>Hecho con &lt;3 en Asunción, República del Paraguay</p>
     </div>
-  </footer>
+
+    <div class="footer-section">
+      <h3>HELP</h3>
+      <a href="#">Ads</a><br>
+      <a href="#">Contáctenos</a><br>
+      <a href="#">POLÍTICA DE PRIVACIDAD Y REGLAS DE USO</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Application</h3>
+      <div class="app-icons">
+        <a href="https://play.google.com/store/apps/details?id=live.arca.android.playstore" target="_blank" class="store-link">
+          <img src="https://cdn-icons-png.flaticon.com/512/3128/3128279.png" alt="Play Store">
+        </a>
+        <a href="https://apps.apple.com/kr/app/arca-live/id1550546493" target="_blank" class="store-link">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </a>
+      </div>
+
+      <p class="policy-text">
+        This site is protected by reCAPTCHA and the Google 
+        <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-icons">
+    <span>⚙️</span>
+    <span>💬</span>
+    <span>📄</span>
+    <span>⬆️</span>
+    <span>⬇️</span>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #1b1b1b;
+    color: #ccc;
+    padding: 30px 60px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  .footer-section h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .footer-section a {
+    color: orange;
+    text-decoration: none;
+  }
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+
+  /* ✅ 아이콘 중앙 정렬 */
+  .app-icons {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .store-link img {
+    height: 45px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  .store-link img:hover {
+    transform: scale(1.05);
+  }
+
+  .policy-text {
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 13px;
+    text-align: center; /* 텍스트도 중앙정렬 */
+  }
+  .policy-text a {
+    color: orange;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+    font-size: 18px;
+  }
+</style>
 
   <script>
     // 헤더 클릭 — 페이지2로 이동 (같은 탭)
