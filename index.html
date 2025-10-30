@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아카라이브 클론</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #121212;
+    color: #ddd;
+  }
+
+  header {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .header-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-center input {
+    width: 250px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+
+  .header-center div {
+    cursor: pointer;
+    font-size: 14px;
+    color: #ddd;
+  }
+
+  .header-center div:hover {
+    color: #fff;
+  }
+
+  main {
+    display: flex;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .rightbar {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar img, .rightbar img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .row section {
+    flex: 1;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+
+  section h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  section ul {
+    list-style: none;
+  }
+
+  section ul li {
+    padding: 4px 0;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 14px;
+    cursor: pointer; /* 클릭 가능 표시 */
+    transition: background 0.2s;
+  }
+
+  section ul li:hover {
+    background-color: #2a2a2a;
+  }
+
+  section ul li:last-child {
+    border-bottom: none;
+  }
+
+  footer {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-center">
+      <input type="text" placeholder="찾기">
+      <div id="subscribeBtn">구독 채널 ▼</div>
+      <div id="mainBtn">주요 채널 ▼</div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="sidebar">
+      <img src="https://da.namu.la/20251015snc/94a5977982cf2191d9cbffb9990cad35b04411d1c571d1c12266b755c6d53034.jpg?expires=1761922800&key=F3rvd9pHFEah-5Gm-tagTg" alt="왼쪽 광고">
+    </div>
+
+    <div class="content">
+      <!-- 1행 -->
+      <div class="row">
+        <section>
+          <h2>카오스 제로 나이트메어 채널</h2>
+          <ul>
+            <li>카제나도 선택지 넣어줘 [0]</li>
+            <li>언니들에게 놀랍고 대단한 전개 [0]</li>
+            <li>큰일나긴했음 [1]</li>
+            <li>사실 플레이어를 피폐시키려는게 진정한 목적 아닐까 [0]</li>
+            <li>근데 오픈겜에 리세 필요함? [4]</li>
+            <li>오픈전부터 큰일났음 근데...;; [2]</li>
+            <li>너희들 빵빵단이냐 농능단이냐 [8]</li>
+            <li>pc 리세 [0]</li>
+            <li>오픈하고 첫 사건사고 뭐할래? 골라봐 [7]</li>
+            <li>에픽 그거 패치가 ㅈㄴ 얼탱이였는데 [1]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>핫딜 채널</h2>
+          <ul>
+            <li>(SKT) 티플 올리브영 11+7개월 (9,000원/무료) [4]</li>
+            <li>하와이안호스트 마카다미아 초콜릿 우유 24개입 (18,350원/무료) [9]</li>
+            <li>펩시제로슈거 라임향 355ml 48캔 (27,440원/무료) [5]</li>
+            <li>보먹돼 삼겹살 100g (1,290원/3,000원) [28]</li>
+            <li>빙그레 야채타임, 70g, 6개 (6,480원/무료) [9]</li>
+            <li>땡겨요 더블할인 땡데이(뚜레쥬르/두찜) 2만원 이상 11,000원 할인 (0원/무료) [22]</li>
+            <li>(7개월) U+망 알뜰폰 11GB+일2GB+3Mbps (9,600원/무료) [37]</li>
+            <li>Soom 베이직 키친타올 6롤 2팩 천연펄프 무형광 (3,592원/무료) [2]</li>
+            <li>프링글스 핫 & 스파이시, 110g, 12개 (15,490원/무료) [8]</li>
+            <li>이마트 캐나다산 삼겹살/목살 100g (990원/3,000원) [50]</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 2행 -->
+      <div class="row">
+        <section>
+          <h2>KBO 채널</h2>
+          <ul>
+            <li>‘12년 만에 친정 복귀’ 손시헌 코치, 두산 김원형호 QC코치 맡는다 [1]</li>
+            <li>한화의 오늘 경기 플랜.jpg [3]</li>
+            <li>키움이 중위로 치면 카프 느낌도 있나 [8]</li>
+            <li>오하아사 예측력 머임... [4]</li>
+            <li>갸)문동주는 가을야구에서 경기 MVP도 땄는데 개도영은 못했네 [2]</li>
+            <li>아 꿈내용 갑자기 기억났다 [4]</li>
+            <li>김도영은 뛰어야 한다, 도루 안 한다고 해결 안 돼 [4]</li>
+            <li>오늘 날씨가 쌀쌀하구나 [6]</li>
+            <li>99% 확률로 류현진 [1]</li>
+            <li>언젠가 히어로즈 팀명으로 다시 가을야구 갈수있을까 [2]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>스텔라 소라 채널</h2>
+          <ul>
+            <li>새해랑 크리스마스에 패키지 나오겠지 [0]</li>
+            <li>근데 오픈날 부터 쭉 생각한건데 이겜 성장재화 [2]</li>
+            <li>아레나 메인만 같은속성이면 진입은 되는건가? [4]</li>
+            <li>아깝다 [0]</li>
+            <li>미네르바 서폿으로 쓸때 좋은점 [0]</li>
+            <li>찍먹해보려는데 재미있음? [7]</li>
+            <li>?? 래코드 같은 5성이여도 스펙차이가 나는데? [10]</li>
+            <li>그래서 치토세는 아야메랑 테레사가 맞는거였음? [3]</li>
+            <li>흑우같은 사고방식인데 다음버전에 효율 개좋은 패키지 내거나 그럴수는 없나 [1]</li>
+            <li>맨날 스킬 막타에 그로기 터지니까 아깝네 [1]</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 3행 -->
+      <div class="row">
+        <section>
+          <h2>주식 채널</h2>
+          <ul>
+            <li>내가 산 국장은 뭔 맨날 공매도 상위네 [0]</li>
+            <li>국장 정상화는 조금 아프네 [0]</li>
+            <li>아 시바 돈 계산 잘못했다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ [1]</li>
+            <li>美 재무부, 러시아 대형 석유회사 제재…유가 3.7% 급등 [0]</li>
+            <li>셧다운 내가볼떈 역대 최장기 갱신할것같음 [2]</li>
+            <li>오늘 글로벌 경제지표와 일정 [0]</li>
+            <li>야간혁명전사 끝난 주붕이 [4]</li>
+            <li>주부이 오늘 할 일 [1]</li>
+            <li>Standard & Poor가 전형적인 거지라는 뜻이지? [4]</li>
+            <li>그만!! 그만!! 때려!! [1]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>원신 채널</h2>
+          <ul>
+            <li>네페르 왜케 약하지 [0]</li>
+            <li>너네 근데 페이백에 쓸 10퍼 쿠폰 남아있냐? [0]</li>
+            <li>네페르 키라라 쓰는거 괜찮네 [0]</li>
+            <li>스토리 재밌는건 알겠는데 그래서 이제 뭐함? [0]</li>
+            <li>네페르 파티 어떻게 짜는게 나을지 좀 고민합니다. [1]</li>
+            <li>뉴비 네페르 파티 한 자리 뭐쓸까 [2]</li>
+            <li>저장용 두린&야호다 재료 [2]</li>
+            <li>이번 스토리 재밌음? 스포 없이 대답좀 [8]</li>
+            <li>이번에 진짜 이갈고 만들었네 [1]</li>
+            <li>우인단 뭔가 다 사연이 잇어보임 [2]</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 4행 -->
+      <div class="row">
+        <section>
+          <h2>블루 아카이브 채널</h2>
+          <ul>
+            <li>이거 왜 다 전투임? [0]</li>
+            <li>작업용 브금으로 대책위원회 더빙판 틀어놓는 중인데 [0]</li>
+            <li>NTR 대신 OTL 어떰? [0]</li>
+            <li>제발 블붕이면 아리스좀애호합시다 [3]</li>
+            <li>난 닛산 GTR이 좋음 [0]</li>
+            <li>스포) 스즈미단 성불에 정점을 찍을 대사 [1]</li>
+            <li>??? : 순애는 너무 질렸어 우린 ntr이다 [3]</li>
+            <li>근데 왜 블챈은 [1]</li>
+            <li>내 아내인데 어때? [1]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>붕괴 스타레일 채널</h2>
+          <ul>
+            <li>파트너 어린 여성을 좋아하는게 당연한 거에요 [0]</li>
+            <li>나도 생각보다는 많이 안뽑은듯? [3]</li>
+            <li>진짜 3.8 거의 다 왔네 [1]</li>
+            <li>내일 왜 방송임 [3]</li>
+            <li>오픈북을 붕스식으로 비유해드림 [5]</li>
+            <li>방역짤 이거 너무 부담스러움,,,, [2]</li>
+            <li>제IX기관이 공허파벌이 아닐수도 있는건가 [4]</li>
+            <li>돌고돌아서 붕스다 결국 [0]</li>
+            <li>스보탐이 머야 [12]</li>
+            <li>4분전아 진짜 마가 꼇나 [6]</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 5행 -->
+      <div class="row">
+        <section>
+          <h2>명조 채널</h2>
+          <ul>
+            <li>명조 시리즈 신작 예고 떴다! [5]</li>
+            <li>명조3 리마스터 루머 사실임? [2]</li>
+            <li>명조 리메이크 그래픽 미쳤다 ㄷㄷ [8]</li>
+            <li>명조2 진엔딩 조건 아는 사람 [3]</li>
+            <li>명조 시리즈 세계관 정리.txt [4]</li>
+            <li>이겜이 진짜 명작이었던 이유 [7]</li>
+            <li>명조 팬아트 공유합니다 [0]</li>
+            <li>다시봐도 명조1 오프닝은 전설 [6]</li>
+            <li>명조3 보스전 브금이 미쳤음 [2]</li>
+            <li>명조 완전판 DLC 루머 정리 [1]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>던전앤파이터 채널</h2>
+          <ul>
+            <li>에컨 졸업 언제함? [3]</li>
+            <li>버서커 리뉴얼 진짜임? [5]</li>
+            <li>던파 클라이언트 개편 이후 체감 [2]</li>
+            <li>이번 레이드 패턴 정리 [8]</li>
+            <li>이게 바로 던파의 맛이지 [7]</li>
+            <li>던린이인데 직업 추천좀 [4]</li>
+            <li>던전앤파이터 모바일 근황 [6]</li>
+            <li>진각성 컷신 순위 정리 [9]</li>
+            <li>던파 인게임 버그 모음 [1]</li>
+            <li>지금 접속 안됨 나만 그래? [12]</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 6행 -->
+      <div class="row">
+        <section>
+          <h2>이터널 리턴 채널</h2>
+          <ul>
+            <li>이리하면서 가장 좆같은 험체 [0]</li>
+            <li>한 6시간 잣나 [3]</li>
+            <li>야 냥빙빙 [5]</li>
+            <li>초코도넛이 너무 좋아 [12]</li>
+            <li>나 사실 호모로맨스에이섹슈얼안드로진임... [6]</li>
+            <li>쌍밀로2루트를 깎아왓는데 [13]</li>
+            <li>3치명 가고 엘디안 갈거면 그냥 하... [0]</li>
+            <li>알렉스는 어떻게 해야하는것인가 [3]</li>
+            <li>9분전아 지친다 [8]</li>
+            <li>브실골 구간에서 유스티나 할만한가 [6]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>리그 오브 레전드 채널</h2>
+          <ul>
+            <li>생각보다 디지몬 캐디 맛있단말이지 [1]</li>
+            <li>8강 진짜 행방을 알 수가 없네 [3]</li>
+            <li>아니 근데 G2는 이 와중에 2군 부활도 시도 중이네 [0]</li>
+            <li>아수라장 개재밌나보네 [1]</li>
+            <li>탑/미드 유저로써 그브 버프가 화나는 이유 [0]</li>
+            <li>5시간동안 아수라장만 했네 [6]</li>
+            <li>키아나, 이블린에게 따이는 누누 [4]</li>
+            <li>? 지투가 이겼음? [2]</li>
+            <li>어제 LEC 스토브 요약 [10]</li>
+            <li>킨드 2판을 했는데 두반 다 미드가 나감 [1]</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="rightbar">
+      <img src="https://da.namu.la/20251016snc/d8d7383c7e1b9e1604546258deaa95d79661de2c314c12bb74aba509dfca7f27.jpg?expires=1761922800&key=yQFnlHt7Dp4duJdu4ZpK5g" alt="오른쪽 광고">
+
+      <section style="background-color:#1b1b1b; border-radius:8px; padding:10px;">
+        <h2 style="color:#fff; font-size:16px; margin-bottom:10px; border-bottom:1px solid #333; padding-bottom:5px;">나무뉴스 주요</h2>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li style="padding:4px 0; border-bottom:1px solid #2a2a2a; font-size:14px;">멀티플랫폼 전략 통했다...블루 아카이브, P...</li>
+          <li style="padding:4px 0; border-bottom:1px solid #2a2a2a; font-size:14px;">특검, '임성근 불송치' 경찰 대거 압수수색 ...</li>
+          <li style="padding:4px 0; border-bottom:1px solid #2a2a2a; font-size:14px;">'이재명 조폭 연루설' 장영하 2심 징역형…" ...</li>
+          <li style="padding:4px 0; border-bottom:1px solid #2a2a2a; font-size:14px;">日, '전쟁가능국가' 되나…다카이치, 트럼프· ...</li>
+          <li style="padding:4px 0; font-size:14px;">'활동 중단' 박봄, 갑작스럽게 양현석 고소?… ...</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="#">공지사항</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">문의하기</a>
+      </div>
+      <p class="footer-copy">© 2025 Acarive Clone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // 헤더 클릭 — 페이지2로 이동 (같은 탭)
+    document.getElementById('subscribeBtn').addEventListener('click', () => {
+      window.location.href = 'page2.html';
+    });
+
+    document.getElementById('mainBtn').addEventListener('click', () => {
+      window.location.href = 'page2.html';
+    });
+
+    // 각 게시물 li 클릭 — alert 제거, 클릭하면 page2.html로 이동 (같은 탭)
+    const listItems = document.querySelectorAll('section ul li');
+    listItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // 클릭된 항목의 텍스트를 쿼리스트링으로 넘기고 싶으면 아래 주석 참고
+        // const title = encodeURIComponent(item.textContent.trim());
+        // window.location.href = `page2.html?title=${title}`;
+        window.location.href = 'page2.html';
+      });
+    });
+  </script>
+  
+</body>
+</html>

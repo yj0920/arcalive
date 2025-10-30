@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>종합 채널 - page2</title>
+<style>
+  :root{
+    --bg:#0f0f0f;
+    --panel:#1c1c1c;
+    --panel-2:#232323;
+    --muted:#9a9a9a;
+    --text:#e6e6e6;
+    --accent:#2b2b2b;
+  }
+  html,body{height:100%; margin:0; font-family:"Noto Sans KR",sans-serif; background:var(--bg); color:var(--text);}
+
+  .topbar{
+    height:44px;
+    background:#0b0b0b;
+    border-bottom:1px solid #1f1f1f;
+    display:flex;
+    align-items:center;
+    padding:6px 18px;
+    gap:12px;
+  }
+  .topbar .left{display:flex; align-items:center; gap:10px;}
+  .topbar .left .icon{
+    width:18px; height:18px; background:linear-gradient(#222,#111); border-radius:3px; display:inline-block;
+  }
+  .topbar .title{font-size:14px; color:#ddd;}
+  .topbar .right{margin-left:auto; color:var(--muted); font-size:13px; display:flex; gap:14px; align-items:center;}
+
+  .wrap{
+    width:1200px;
+    margin:18px auto 40px;
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+  }
+
+  /* 좌측 광고 배너 */
+  .left-ad{
+    width:100px;
+    min-height:520px;
+    border-radius:6px;
+    overflow:hidden;
+    background:#1a1a1a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .left-ad img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .main{
+    flex:1 1 0;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .channel-header{
+    background:var(--panel);
+    padding:14px 16px;
+    border-radius:8px;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .channel-header .icon{
+    width:36px; height:36px; background:#222; border-radius:6px;
+  }
+  .channel-header .meta{color:var(--muted); font-size:13px;}
+  .channel-header .meta .title{color:var(--text); font-weight:600; font-size:16px; display:block; margin-bottom:6px;}
+
+  .post-title{
+    background:var(--panel-2);
+    padding:12px 14px;
+    border-radius:6px;
+    font-size:15px;
+    color:#dcdcdc;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  .post-body{
+    background:#111;
+    border-radius:6px;
+    padding:18px;
+    min-height:520px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  .post-card{
+    width:760px;
+    background:#fff;
+    border-radius:4px;
+    padding:40px;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:center;
+  }
+  .post-card img{max-width:100%; height:auto; display:block;}
+
+  .right{
+    width:260px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .side-panel{
+    background:var(--panel);
+    padding:12px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .side-panel h4{color:var(--text); font-size:15px; margin:0 0 8px 0; border-bottom:1px solid #2a2a2a; padding-bottom:6px;}
+  .side-panel ul{list-style:none; margin:0; padding:0;}
+  .side-panel li{font-size:13px; color:var(--muted); padding:8px 0; border-bottom:1px solid #222;}
+  .side-panel li:last-child{border-bottom:none;}
+
+  /* 우측 광고 배너 */
+  .bottom-ad{
+    height:220px;
+    border-radius:6px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1a1a1a;
+  }
+  .bottom-ad img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  footer{height:72px; display:flex; align-items:center; justify-content:center; color:#666; font-size:13px; border-top:1px solid #111; margin-top:30px;}
+  
+  @media(max-width:1280px){
+    .wrap{width:100%; padding:0 18px;}
+    .post-card{width:640px;}
+  }
+  @media(max-width:900px){
+    .left-ad, .right{display:none;}
+    .wrap{flex-direction:column; gap:12px;}
+    .post-card{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="left">
+      <span class="icon"></span>
+      <span class="title">종합 채널</span>
+    </div>
+    <div class="right">
+      <span>🔔 알림</span>
+      <span>➕ 구독</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- 좌측 광고 배너 -->
+    <aside class="left-ad">
+      <img src="https://da.namu.la/20251023snc/52c35ccb5daa061266f716d3ccbae24da1a74f60a500df2628aff286470741f7.jpg?expires=1761922800&key=EZ-_YbhhYucqaMd-lfXpjA" alt="좌측 광고">
+    </aside>
+
+    <main class="main">
+      <div class="channel-header">
+        <div class="icon"></div>
+        <div>
+          <span class="title">종합 채널</span>
+          <div class="meta">글 누르면 이 화면이 나옴</div>
+        </div>
+      </div>
+
+      <div class="post-title">키레네 2돌 하면 스택 반 채워주고 시작함?</div>
+
+      <div class="post-body">
+        <div class="post-card">
+          <img src="https://dcimg1.dcinside.com/viewimage.php?id=3dafdf2ce0d12ca867b4d3&no=24b0d769e1d32ca73de883fa11d02831b8cb9d3d20aacaf16d808940f2933b31af891b727b1d536455a5923eb07112ab0b98de5088d225c37b92f4eb9cdf23c199ccbfbb7f6b953b5afb041ca057069daa88b91a193791c903bc12cbf538337c338b3fda77c2fd4aa3317576b2bb&orgExt" alt="예시 이미지">
+        </div>
+      </div>
+    </main>
+
+    <aside class="right">
+      <div class="side-panel">
+        <h4>핫딜 채널</h4>
+        <ul>
+          <li>블루 아카이브 글로벌(업적 포함)...</li>
+          <li>스타레일 집단 2.0 풀유출...</li>
+          <li>스트리트 파이터 6 신규 DLC...</li>
+          <li>베이스볼 스타트 6 무료 배포 중...</li>
+          <li>HADES 무료 배포 (9,180원)</li>
+        </ul>
+      </div>
+
+      <div class="side-panel">
+        <h4>이 채널의 개념글</h4>
+        <ul>
+          <li>클라라 그려봤어요</li>
+          <li>주인상태때 교관충 “다단히트”</li>
+          <li>누나짤 모음</li>
+          <li>카스도이가 머리를 다쳤네!</li>
+          <li>오늘 설거지 당번 어딨냐</li>
+        </ul>
+      </div>
+
+      <!-- 우측 광고 배너 -->
+      <div class="bottom-ad">
+        <img src="https://da.namu.la/20251023snc/a03a8e27672c5ff207ade7d93446aca5eafe5e18af1cb9832e3881f71d296ccf.jpg?expires=1761922800&key=8xpUpWTqzBqDOXBcTSHU-A" alt="우측 광고">
+      </div>
+    </aside>
+  </div>
+
+  <footer>© 2025 Acarive Clone. All rights reserved.</footer>
+
+</body>
+</html>
